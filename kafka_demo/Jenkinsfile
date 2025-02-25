@@ -7,7 +7,7 @@ pipeline {
       }
       steps {
         git branch: 'main', url: 'https://github.com/praveen-verma-j/Jenkins-Zero-To-Hero'
-        sh 'cd kafka_demo && mvn clean install'
+        sh 'cd kafka_demo && mvn clean package'
       }
     }
     stage('Front-end') {
