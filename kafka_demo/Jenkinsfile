@@ -6,7 +6,7 @@ pipeline {
         docker { image 'maven:3.8.1-adoptopenjdk-11' }
       }
       steps {
-        git 'https://github.com/praveen-verma-j/Jenkins-Zero-To-Hero'
+        git branch: 'main', url: 'https://github.com/praveen-verma-j/Jenkins-Zero-To-Hero'
         sh 'cd kafka_demo && mvn clean build'
       }
     }
